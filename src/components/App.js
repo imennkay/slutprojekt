@@ -1,22 +1,62 @@
-import React from "react";
+import React, {Component} from "react";
 import Card from "./Card";
-import faker from "faker";
+import axios from "axios";
+import Home from "./Home";
 
 
 
-const App = ()=>{
+class App extends Component {
+
+    state={
+        products: []
+    }
+
+    onClickApi(){
+        axios
+         .get("http://localhost:1337/products").then(res=>{
+             console.log(res.data);
+             this.setState({products:res.data})
+    })
+
+}
+componentDidMount(){
+
+    axios
+         .get("http://localhost:1337/products").then(res=>{
+             console.log(res.data);
+             this.setState({products:res.data})
+    })
+    
+}
+
+
+    render(){
     return(
-        <div>
-          
-            <Card image={faker.image.cats()} />
-            <Card image={faker.image.animals()} />
+        <div className="bgcolor">
 
+
+        <div className="flex">
             
             
             
+            {this.state.products.map((product)=>(
+
+            <Card  
+            key={product.id}
+            title={product.title}
+            price={product.price}
+            description={product.description}
+            image={"http://localhost:1337"+product.image.formats.thumbnail.url}
+             />
+            )
+            )}
+        
 
         </div>
+        </div>
+       
     )
+}
 }
 
 export default App;

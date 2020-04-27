@@ -5,14 +5,18 @@ import React from "react";
 
 const Booking = ()=>{
     return(
-        <div>
-          <center>
-         <span>{localStorage.getItem('valuefromForm1')}</span><br />
+        <div className="mybooking">
+          
+         <span>Name: {localStorage.getItem('valuefromForm1')}</span><br />
          
-         <span> {localStorage.getItem('valuefromForm2')}</span> <br />
+         <span>Time: {localStorage.getItem('valuefromForm2')}</span> <br />
          
-         <span> {localStorage.getItem('valuefromForm3')}</span><br />
-         </center>
+         <span>Mobile: {localStorage.getItem('valuefromForm3')}</span><br />
+
+         <span>Details: {localStorage.getItem('valuefromForm4')}</span><br />
+
+         <button className="button">Book Now</button>
+        
          
         </div>
     )

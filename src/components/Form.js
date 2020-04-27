@@ -4,7 +4,8 @@ class Form extends Component{
 
     state={dataFromName:" ",
     dataFromTime:" ",
-    dataFromMobile:" "
+    dataFromMobile:" ",
+    dataFromDetails:""
 };
 
 
@@ -28,6 +29,7 @@ this.setState({dataFromName:e.target.elements.fullname.value})
         localStorage.setItem('valuefromForm1', this.state.dataFromName);
         localStorage.setItem('valuefromForm2', this.state.dataFromTime);
         localStorage.setItem('valuefromForm3', this.state.dataFromMobile);
+        localStorage.setItem('valuefromForm4', this.state.dataFromDetails);
 
 
     }
@@ -61,15 +63,27 @@ this.setState({dataFromName:e.target.elements.fullname.value})
 
     }
 
+    onChangeInputDetails(e){
+
+
+        this.setState({dataFromDetails:e.target.value})
+ 
+ 
+ 
+ 
+     }
+ 
+
 
 
     render(){
         return(
-            <div> 
+            <div className="formular">
                 <form onSubmit={this.onSubmitForm.bind(this)}>
-                <input onChange={this.onChangeInputName.bind(this)} type="text" name={"fullname"} placeholder={"Full Name"}></input>
-                <input onChange={this.onChangeInputTime.bind(this)} type="text" name={"booktime"} placeholder={"ex: 15:00"}></input>
-                <input onChange={this.onChangeInputMobile.bind(this)} type="number" name={"mobile"} placeholder={"Mobile Number"}></input>
+                <input onChange={this.onChangeInputName.bind(this)} type="text" name={"fullname"} placeholder={"Write your name"}></input><br/>
+                <input onChange={this.onChangeInputTime.bind(this)} type="text" name={"booktime"} placeholder={"Book your time ex: 15:00"}></input><br/>
+                <input onChange={this.onChangeInputMobile.bind(this)} type="number" name={"mobile"} placeholder={"Your phone number"}></input><br/>
+                <textarea onChange={this.onChangeInputDetails.bind(this)} name={"textarea1"} placeholder="How can we help you?"></textarea><br/>
                 
 
 

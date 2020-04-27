@@ -1,6 +1,6 @@
 .nav ul {
     list-style: none;
-    background-color: #198475;
+    background-color: #812562;
     text-align: center;
     width: 100%;
   }
@@ -58,3 +58,67 @@
     } */
     
   }
+
+
+  .formular{
+    text-align: center;
+
+    
+  }
+
+  input {
+    width: 50%;
+    padding: 1rem;
+    margin: 1rem;
+
+  }
+
+  textarea{
+    width: 50%;
+    height: 15rem;
+  }
+
+  .flex{
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin-top: -15px;
+    margin-left: 50px;
+  }
+
+  .mybooking{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    color: black;
+    padding: 0;
+    margin: 0;
+    width: 30rem;
+    position: absolute;
+    left: 36%;
+    font-size: 2rem;
+   
+  }
+
+  .button{
+    color: white;
+    background-color: #198475;
+    padding: 0;
+    margin: 0;
+    border: none;
+
+  }
+
+  .bg{
+    background-image: url("../image/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    height: 100.5vh;
+    z-index: -100;
+    margin-top: -70px;
+
+  }
+
+  
