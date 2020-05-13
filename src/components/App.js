@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Card from "./Card";
 import axios from "axios";
-import Home from "./Home";
+//import Home from "./Home";
 
 
 
@@ -43,6 +43,7 @@ componentDidMount(){
 
             <Card  
             key={product.id}
+            docId={product.id}
             title={product.title}
             price={product.price}
             description={product.description}
