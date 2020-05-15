@@ -4,7 +4,7 @@ import "firebase/auth";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCmS-9RB4RLkhGb7cN4EOjbVz0fgpNSaOs",
+    //apiKey: "AIzaSyCmS-9RB4RLkhGb7cN4EOjbVz0fgpNSaOs",
     authDomain: "bookingapp-5c012.firebaseapp.com",
     databaseURL: "https://bookingapp-5c012.firebaseio.com",
     projectId: "bookingapp-5c012",
