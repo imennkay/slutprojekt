@@ -5,16 +5,33 @@ import firebase from "../FirebaseConfig";
 class UserProfile extends Component{
 
     logOut(){
+       
+        localStorage.clear();
+        window.location.reload(false);
+        firebase.auth().signOut();
+     }
 
-      firebase.auth().signOut();
-      localStorage.clear();
+    deleteAccount(){
+        var user = firebase.auth().currentUser;
+        console.log(user);
+
+        user
+          .delete()
+          .then(function () {
+            // User deleted.
+          })
+          .catch(function (error) {
+            // An error happened.
+          });
+
     }
     render(){
         return(
             <div>
                 <b>Welcome</b> {this.props.userData}
 
-                <a href="/userpage" onClick= {this.logOut.bind(this)}>Sign out</a> 
+                <button onClick= {this.logOut.bind(this)}>Sign out</button> 
+                <button onClick={this.deleteAccount.bind(this)}>Delete user</button>
 
             </div>
         )

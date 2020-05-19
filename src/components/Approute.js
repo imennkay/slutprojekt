@@ -17,6 +17,8 @@ import FirebaseTest from "./FirebaseTest";
 import {Redirect} from "react-router-dom";
 import UserLogin from "./AuthUser/UserLogin";
 import UserPage from "./AuthUser/UserPage";
+import UserProfile from "./AuthUser/UserProfile";
+import Contact from "./Contact";
 
 
 
@@ -37,8 +39,11 @@ const Approute = ()=>{
                    <Route path="/adminlogin" exact component={AdminLogin}></Route>
                    <Route path="/adminpage" exact component={AdminSida}></Route>
                    <Route path="/Logout" exact component={Logout}></Route>
+                   <Route path="/userprofile" exact component={UserProfile}></Route>
                    <Route path="/firebasetest" exact component={FirebaseTest}></Route>
                    <Route path="/userpage" exact component={UserPage}></Route>
+                   <Route path="/contact" exact component={Contact}></Route>
+
 
 
 

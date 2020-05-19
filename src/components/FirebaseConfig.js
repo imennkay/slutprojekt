@@ -2,15 +2,15 @@ import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";
 
-
+require('dotenv').config()
 const firebaseConfig = {
-    //apiKey: "AIzaSyCmS-9RB4RLkhGb7cN4EOjbVz0fgpNSaOs",
-    authDomain: "bookingapp-5c012.firebaseapp.com",
-    databaseURL: "https://bookingapp-5c012.firebaseio.com",
-    projectId: "bookingapp-5c012",
-    storageBucket: "bookingapp-5c012.appspot.com",
-    messagingSenderId: "888874645062",
-    appId: "1:888874645062:web:c934b254b738781a403c47"
+    apiKey: process.env.REACT_APP_APIKEY,
+    authDomain: process.env.REACT_APP_AUTHDOMAIN,
+    databaseURL: process.env.REACT_APP_DATABASEURL,
+    projectId: process.env.REACT_APP_PROJECTID,
+    storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+    appId: process.env.REACT_APP_APPID
   };
 
   firebase.initializeApp(firebaseConfig);

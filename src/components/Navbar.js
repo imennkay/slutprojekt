@@ -20,6 +20,8 @@ const Navbar = ()=>{
         <li> <Link to={"/book"}>Book Now</Link>      </li>
         <li> <Link to={"/booking"}>My Booking</Link> </li>
         <li> <Link to={"/adminpage"}>Admin</Link>    </li>
+        <li> <Link to={"/contact"}>Contact Us</Link>    </li>
+
         <li><Logout/></li>
         
         
