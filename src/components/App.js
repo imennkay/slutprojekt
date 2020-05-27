@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Card from "./Card";
 import axios from "axios";
+import MinBooking from "./MinBooking";
 //import Home from "./Home";
 
 
@@ -51,6 +52,8 @@ componentDidMount(){
              />
             )
             )}
+
+            <MinBooking/>
         
 
         </div>

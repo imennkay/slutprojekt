@@ -65,6 +65,13 @@
 
     
   }
+  .button2{
+    background-color: #812562;
+    border: none;
+    color: white;
+    position: relative;
+    bottom: 2px;
+  }
 
   input {
     width: 50%;
@@ -121,4 +128,24 @@
 
   }
 
-  
+  #loginname{
+    color: #812562;
+    position: absolute;
+    left: 11rem;
+    /* background: #0e8dbc; */
+    }
+    h1{
+      position: relative;
+      left: 35rem;
+    }
+
+   #btnedit{
+     width: 23rem;
+     
+   }
+
+   #bookingsTableDescription{
+     
+     font-size: medium;
+     color: red;
+   }

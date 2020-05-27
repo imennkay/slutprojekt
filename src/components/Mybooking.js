@@ -9,7 +9,7 @@ const Booking = ()=>{
           
          <span>Name: {localStorage.getItem('valuefromForm1')}</span><br />
          
-         <span>Time: {localStorage.getItem('valuefromForm2')}</span> <br />
+         <span>Item: {localStorage.getItem('valuefromForm2')}</span> <br />
          
          <span>Mobile: {localStorage.getItem('valuefromForm3')}</span><br />
 

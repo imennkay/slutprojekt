@@ -22,8 +22,11 @@ this.setState({condition:true})
         email: e.target.elements.email.value,
         meddelande: e.target.elements.textarea.value
 
+       
+
         
     });
+    console.log(docRef)
 
   /*   docRef.add({
     }); */

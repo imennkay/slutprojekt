@@ -8,7 +8,8 @@ class UserLogin extends Component{
 
     state={
         condition:true,
-        user:""
+        user:"",
+        email: ""
     }
 
     uiConfig = {
@@ -104,6 +105,14 @@ class UserLogin extends Component{
                     <input type="email" name="email" placeholder={"Enter your Email"}/>
                     <input type="password"  name="password" placeholder={"Enter your Password"}/><br/>
                     <button>Login</button>
+
+                    <form onSubmit={this.resetPassword.bind(this)}>
+
+<input type="email" name="resetEmail" placeholder="Write your email"></input>
+
+<button>reset password</button>
+
+</form>
                 </form>}
 
 
@@ -115,15 +124,11 @@ class UserLogin extends Component{
                     <input type="email" name="email" placeholder={"Type your Email"}/>
                     <input type="password" name="password" placeholder={"Type your Password"}/><br/>
                     <button>Register</button>
+
+                    <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
                 </form>  }
 
-                <form onSubmit={this.resetPassword.bind(this)}>
-
-                    <input type="email" name="resetEmail" placeholder="Write your email"></input>
-
-                <button>forgot password?</button>
-
-                </form>
+               {this.state.user? <UserProfile userData={this.state.user} /> : <div>There is no user </div>}
                
 
 
@@ -135,13 +140,9 @@ class UserLogin extends Component{
 
 {/* <button onClick={this.onClickRegister.bind(this)}>Don't have an account?</button> */}
 <button onClick={this.onClickLogin.bind(this)}>Login</button>
-<button onClick={this.onClickRegister.bind(this)}>Register</button>   
+<button  onClick={this.onClickRegister.bind(this)}> Register</button>   
 
-<div>
-        <h1>My App</h1>
-        <p>Please sign-in:</p>
-        <StyledFirebaseAuth uiConfig={this.uiConfig} firebaseAuth={firebase.auth()}/>
-      </div>
+
             </div>
         )
     }

@@ -81,7 +81,7 @@ this.setState({dataFromName:e.target.elements.fullname.value})
             <div className="formular">
                 <form onSubmit={this.onSubmitForm.bind(this)}>
                 <input onChange={this.onChangeInputName.bind(this)} type="text" name={"fullname"} placeholder={"Write your name"}></input><br/>
-                <input onChange={this.onChangeInputTime.bind(this)} type="text" name={"booktime"} placeholder={"Book your time ex: 15:00"}></input><br/>
+                <input onChange={this.onChangeInputTime.bind(this)} type="text" name={"booktime"} placeholder={"Enter your item name or item number"}></input><br/>
                 <input onChange={this.onChangeInputMobile.bind(this)} type="number" name={"mobile"} placeholder={"Your phone number"}></input><br/>
                 <textarea onChange={this.onChangeInputDetails.bind(this)} name={"textarea1"} placeholder="How can we help you?"></textarea><br/>
                 

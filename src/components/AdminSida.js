@@ -1,9 +1,6 @@
 import React, { Component } from "react";
-import AdminProfile from "./AdminProfile";
 import AdminLogin from "./AdminLogin";
 import Adminform from "./Adminform";
-import Logout from "./Logout";
-import DeletePost from "./DeletePost";
 
 class AdminSida extends Component {
   state = {

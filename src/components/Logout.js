@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import { Redirect } from "react-router-dom";
 
 
 class Logout extends Component{
@@ -20,4 +19,3 @@ class Logout extends Component{
 }
 
 export default Logout;
-

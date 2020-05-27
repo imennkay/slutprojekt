@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Logout from "./Logout";
 
 
 class AdminProfile extends Component{
