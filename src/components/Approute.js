@@ -18,6 +18,7 @@ import UserProfile from "./AuthUser/UserProfile";
 import Contact from "./Contact";
 import MinBooking from "./MinBooking";
 import UserUpdateProfile from "./AuthUser/UserUpdateProfile";
+import Card from "./Card";
 
 
 
@@ -42,6 +43,7 @@ const Approute = ()=>{
                    <Route path="/userpage" exact component={UserPage}></Route>
                    <Route path="/contact" exact component={Contact}></Route>
                    <Route path="/minbooking" exact component={MinBooking}></Route>
+                   <Route path="/card" exact component={Card}></Route>
                    <Route path="/userPage/updateProfile" exact component={UserUpdateProfile}></Route>
 
 

@@ -12,6 +12,8 @@ class UserLogin extends Component{
         email: ""
     }
 
+    
+
     uiConfig = {
         // Popup signin flow rather than redirect flow.
         signInFlow: 'popup',
@@ -34,6 +36,8 @@ class UserLogin extends Component{
 
           })
       }
+
+      component
 
     
     
